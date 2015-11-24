@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RadicalPhoto Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="css/radicalphoto.css">
+</head>
+<body>
+
+<div id="header">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+	<h1>RadicalPhoto</h1>
+
+</div>
+
+<div id="main_wrapper">
+
+	<div id="content">
+	<h2>Contact RadicalPhoto</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+		<form id="myform" method="post" action="">
+                <div class="form-group">
+                    <label for="name" >Name</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                    <label for="name">Email</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <hr>
+                    <input type="submit" class="btn btn-info" id="send-button" value="Send">
+                    <button type="reset" class="btn btn-success" id="reset-button">Reset</button>
+                </div>
+            </form>
+
+	</div>
+
+	<div id="footer">
+	<p>All content &copy; Copyright</p>
+	</div>
+
+</div>
+
+<script>
+
+var the_name = document.getElementById("name");
+var the_email = document.getElementById("email");
+var the_message = document.getElementById("message");
+var submit_btn = document.getElementById("send-button");
+var reset_btn = document.getElementById("reset-button");
+var my_form = document.getElementById("myform");
+var contact_form = document.getElementById("contact");
+my_form.onsubmit = function() {
+    //code to run before form is submitted
+    var errors = 0;
+    var user_name = the_name.value;
+    var user_email = the_email.value;
+    var user_message = the_message.value;
+
+    if (user_name == "") {
+        the_name.style.border = "1px solid #C00";
+        the_name.style.boxShadow = "0 0 5px #C00";
+        errors++;
+		alert("ALL TEXT IS REQUIRED");
+    } else {
+        the_name.style.border = "1px solid green";
+        the_name.style.boxShadow = "none";
+		
+    }
+    if (user_email == "") {
+        the_email.style.border = "1px solid #C00";
+        the_email.style.boxShadow = "0 0 5px #C00";
+        errors++;
+		alert("ALL TEXT IS REQUIRED");
+    } else {
+        the_email.style.border = "1px solid green";
+        the_email.style.boxShadow = "none";
+    }
+    
+    if (user_message == "") {
+        the_message.style.border = "1px solid #C00";
+        the_message.style.boxShadow = "0 0 5px #C00";
+        errors++;
+		alert("ALL TEXT IS REQUIRED");
+    } else {
+        the_message.style.border = "1px solid green";
+        the_message.style.boxShadow = "none";
+    }
+
+    if (errors>0) {
+        return false;
+    }
+}
+
+my_form.onreset = function() {
+    formobject.reset();
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RadicalPhoto Gallery</title>
+	<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+	<link type="text/css" rel="stylesheet" href="css/radicalphoto.css">
+</head>
+<body>
+
+<div id="header">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+	<h1>RadicalPhoto</h1>
+
+</div>
+
+<div id="main_wrapper">
+
+	<div id="content">
+	<h2>Gallery</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+	
+
+ 
+<div id="thumbs">
+     <img src="images/blue_dress_thumb.jpg" alt="Girl in Blue Dress" onmouseover="swapImage(0)" />
+     <img src="images/boxer_thumb.jpg" alt="boxer" onmouseover="swapImage(1)" />
+     <img src="images/cow_thumb.jpg" alt="cow beside sign 'authorized vehicles only'" onmouseover="swapImage(2)" />
+     <img src="images/country_boy_relaxing_thumb.jpg" alt="cowboy sitting down" onmouseover="swapImage(3)" />
+     <img src="images/eye_thumb.jpg" alt="black and white eye, closeup with full colour iris" onmouseover="swapImage(4)" />
+     <img src="images/ice_swim_thumb.jpg" alt="man stepping out of ice pond" onmouseover="swapImage(5)" />
+     <img src="images/sitting_thumb.jpg" alt="vintage feel, man sitting by side of road" onmouseover="swapImage(6)" />
+     <img src="images/test_thumb.jpg" alt="ladybird" onmouseover="swapImage(7)" />
+		
+
+	</div>
+    	<div id="image">
+        <img id="theImage" src="images/blue_dress.jpg" alt="Blonde girl in blue dress leaning against fence">
+        
+        </div>
+    
+
+	</div>
+
+	<div id="footer">
+	<p>All content &copy; Copyright</p>
+	</div>
+
+</div>
+<script>
+
+/* Photo Swap Script - Gallery Page */
+
+var imgArray = new Array(
+     'blue_dress.jpg',
+     'boxer.jpg',
+     'cow.jpg',
+     'country_boy_relaxing.jpg',
+     'eye.jpg',
+     'ice_swim.jpg',
+	 'sitting.jpg',
+	 'test.jpg'
+);
+ 
+var imgPath = "images/";
+
+function swapImage(imgID) {
+     var theImage = document.getElementById('theImage');
+     var newImg;
+     newImg = imgArray[imgID];
+     theImage.src = imgPath + newImg;
+}
+
+</script>
+
+
+
+
+</body>
+</html>
